@@ -1,0 +1,23 @@
+import numpy as np
+import os
+import glob
+import cv2
+import matplotlib.pyplot as plt
+
+import insightface
+from insightface.app import FaceAnalysis
+from insightface.data import get_image as ins_get_image
+
+# get versions
+insightface.__version__  # 0.7.3
+np.__version__           # 1.24.3
+
+## 1. Detect faces
+app = FaceAnalysis(name='buffalo_l')
+app.prepare(ctx_id=0, det_size=(640, 640))
+
+
+img = ins_get_image('t1')
+
+
+
